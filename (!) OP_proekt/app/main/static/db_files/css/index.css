@@ -1,0 +1,507 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: "Open Sans", sans-serif;
+      color: #140A32;
+      font-weight: 400;
+      font-size: 16px;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+html {
+      position: relative;
+}
+
+.conteiner {
+      margin-inline: 140px;
+}
+
+#cont_face {
+      padding-top: 40px;
+
+      margin: 0 auto;
+      color: #140A32;
+
+      font-size: 42px;
+
+      padding: 200px 0 350px 0;
+
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+}
+
+.conteiner_katalog {
+      margin-inline: 140px;
+      display: flex;
+}
+
+#footer_cont {
+      display: flex;
+      justify-content: space-between;
+}
+
+/* Header */
+.header {
+      padding: 20px 0;
+}
+
+.header_nvpn {
+      display: flex;
+      justify-content: space-between;
+}
+
+.header_nvpn_image {
+      width: 300px;
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_image img {
+      width: 85px;
+      height: 85px;
+      cursor: pointer;
+}
+
+.header_nvpn_image span {
+      font-size: 13px;
+      margin-left: 10px;
+      color: rgba(47, 43, 67, 0.544);
+}
+
+.header_nvpn_search {
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_search input {
+      height: 49px;
+      width: 340px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: rgba(47, 43, 67, 0.04);
+}
+
+.header_nvpn_search input::placeholder {
+      color: rgba(47, 43, 67, 0.544);
+}
+
+.header_nvpn_search_button {
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      background-color: rgba(47, 43, 67, 0.04);
+      cursor: pointer;
+      padding: 10px;
+}
+
+.header_nvpn_search_button img {
+      width: 25px;
+      height: 25px;
+}
+
+.header_nvpn_other {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+}
+
+.header_nvpn_other_ul {
+      list-style: none;
+      display: flex;
+}
+
+.header_nvpn_other_ul li {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_other_ul a {
+      text-decoration: none;
+      color: #140A32;
+}
+
+.header_nvpn_other_ul a:hover {
+      color: #4927af;
+      transition: 0.7s;
+}
+
+.header_nvpn_other_ul span {
+      margin-left: 5px;
+}
+
+
+.header_nvpn_other_ul img {
+      width: 25px;
+      height: 25px;
+}
+
+/* Каталог */
+.dropdown button {
+      padding: 10px;
+      border: none;
+      outline: none;
+
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      background-color: rgba(51, 131, 110, 1);
+      cursor: pointer;
+
+      /* Новый */
+      display: inline-block;
+      /*  */
+
+      width: 100px;
+      height: 50px;
+}
+
+/* Новый код */
+.katalog_main,
+.katalog_main_right_side {
+      position: relative;
+      display: inline-block;
+}
+
+.katalog_main_right_side:hover .drp_dwn_cont_right,
+.katalog_main:hover .drp_dwn_cont {
+      display: block;
+}
+
+/* .button_fixed, 
+#dropdown_left_side button {
+      position: fixed;
+} */
+
+/*  */
+
+.dropdown button:hover,
+.dropdown button:focus,
+.drp_dwn_cont li:hover,
+.pagination_block button:hover,
+.pagination_block button:focus {
+      background-color: rgb(37, 98, 82);
+      transition: 0.7s;
+}
+
+.drp_dwn_cont a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      padding: 5px;
+
+      /* Новое */
+
+      display: block;
+
+      /*  */
+}
+
+.drp_dwn_cont li,
+.drp_dwn_cont_right li,
+.katalog_main_right_side form li {
+      list-style: none;
+      cursor: pointer;
+
+      border-radius: 0;
+      padding: 11px;
+      margin: 0;
+}
+
+.drp_dwn_cont li:nth-child(5) {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+}
+
+.drp_dwn_cont li:nth-child(1) {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+}
+
+.drp_dwn_cont {
+      background-color: rgba(51, 131, 110, 1);
+
+      /* Новое */
+      display: none;
+      width: 170px;
+      position: absolute;
+      z-index: 1;
+      top: 48px;
+      /*  */
+
+      margin-top: 3px;
+      border-radius: 10px;
+}
+
+#drp_dwn_cont_face {
+      top: 62px;
+}
+
+.katalog_main_right_side form {
+      color: white;
+}
+
+.drp_dwn_cont_right {
+      background-color: rgba(51, 131, 110, 1);
+
+      display: none;
+      width: 250px;
+      position: absolute;
+      z-index: 1;
+      top: 48px;
+
+      margin-top: 3px;
+      border-radius: 10px;
+}
+
+.drp_dwn_cont_right li {
+      list-style: none;
+      cursor: pointer;
+
+      border-radius: 10px;
+      padding: 0;
+      margin: 0;
+}
+
+.catalog_right_side {
+      margin-left: 160px;
+      width: 100%;
+}
+
+.dropdown_right_side_main {
+      padding: 10px 20px;
+      cursor: default;
+}
+
+.cont_right_side_row {
+      display: block;
+      align-items: center;  
+      margin: 5px 0 0 0; 
+}
+
+.drp_dwn_cont_right_form {
+      color: white;
+      font-size: 16px;  
+}
+
+.drp_dwn_cont_right_form {
+      cursor: default;
+}
+
+.cont_right_side_row input {
+      position: relative;
+      top: 1px;
+}
+
+#drp_btn_filter_right_side {
+      margin-top: 8px;
+      border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.cont_right_side_row,
+.drp_dwn_cont_right p {
+      display: inline-block;
+}
+
+/* Каталог left_side */
+.catalog_left_side {
+      width: 300px;
+}
+
+/* <!-- Фильтрации характеристик и товары --> */
+.filtr_xar_tov_right_side {
+      padding-top: 35px;
+      width: 100%;
+      padding-left: 0px;
+}
+
+.cards_main {
+      padding: 10px;
+      border: none;
+      outline: none;
+
+      margin-bottom: 60px;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+}
+
+.cardd_main {
+      width: 350px;
+      height: 550px;
+      padding: 20px;
+      border-radius: 10px;
+      margin-inline: 20px;
+
+      outline: none;
+      border: 1px solid rgb(37, 98, 82);
+      background-color: white;
+
+      margin-bottom: 40px;
+}
+
+.card_head {
+      margin-bottom: 8px;
+}
+
+.card_head img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+}
+
+.card_head img a {
+      margin-bottom: 13px;
+}
+
+.card_cont span {
+      color: rgb(37, 98, 82);
+      font-size: 24px;
+      font-weight: 700;
+}
+
+.card_cont p {
+      height: 70px;
+      overflow: hidden;
+}
+
+.card_cont {
+      margin-top: 15px;
+}
+
+.card_cont a {      
+      text-decoration: none;
+      color: #140A32;
+
+      display: inline;
+}
+
+.card_cont a:hover {
+      color: #4927af;
+      transition: 0.7s;
+}
+
+#drop_button_card button {
+      margin-top: 25px;
+      width: 100%;
+}
+
+.cards_row {
+      margin: 55px 0;
+}
+
+#cards_row_1 {
+      margin-top: 0;
+}
+
+/* Пагинация */
+.pagination_block_main {
+      padding: 20px;
+      margin-bottom: 100px;
+}
+
+.pagination_block {
+      display: block;
+      width: 330px;
+      height: 45px;
+
+      margin: 0 auto;
+
+      display: flex;
+}
+
+.pagination_block button {
+      height: 100%;
+      width: 25%;
+      cursor: pointer;
+      background-color: rgba(51, 131, 110, 1);
+      text-align: center;
+
+
+      border: none;
+      outline: none;
+
+      padding: 10px;
+}
+
+.pagination_block a {
+      text-decoration: none;
+
+      color: white;
+
+      font-size: 17px;
+}
+
+
+/* Футер */
+.footer {
+      background-color: rgba(47, 43, 67, 0.04);
+      width: auto;
+      height: 320px;
+      padding-top: 30px;
+      margin-top: auto;
+}
+
+.footer_first,
+.footer_fourth  {
+      width: 340px;
+}
+
+.footer_second,
+.footer_third {
+      width: 150px;
+}
+
+.footer p,
+.footer a {
+      text-decoration: none;
+      color: rgba(47, 43, 67, 0.544);
+      font-size: 14px;
+
+      margin: 5px 0;
+
+      display: inline-block;
+      cursor: pointer;
+}
+
+.footer span {
+      text-decoration: none;
+      color: rgba(47, 43, 67, 0.544);
+      font-size: 14px;
+
+      margin: 5px 0;
+
+      display: inline-block;
+}
+
+.search_form {
+      position: relative;
+      top: 23px;
+}
+
+/* Для каталога */
+.footer li {
+      list-style: none;
+      padding: 4.5px 0;
+}
+
+.footer a:hover,
+.footer_a_p:hover {
+      text-decoration: underline;   
+}

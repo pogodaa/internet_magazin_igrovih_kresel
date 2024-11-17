@@ -1,0 +1,330 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: "Open Sans", sans-serif;
+      color: #140A32;
+      font-weight: 400;
+      font-size: 16px;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+html {
+      position: relative;
+}
+
+.conteiner {
+      margin-inline: 140px;
+}
+
+.conteiner_katalog {
+      margin-inline: 140px;
+      display: flex;
+}
+
+#footer_cont {
+      display: flex;
+      justify-content: space-between;
+}
+
+/* Header */
+.header {
+      padding: 20px 0;
+}
+
+.header_nvpn {
+      display: flex;
+      justify-content: space-between;
+}
+
+
+.header_nvpn_image {
+      width: 300px;
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_image img {
+      width: 85px;
+      height: 85px;
+      cursor: pointer;
+}
+
+.header_nvpn_image span {
+      font-size: 13px;
+      margin-left: 10px;
+      color: rgba(47, 43, 67, 0.544);
+}
+
+.header_nvpn_search {
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_search input {
+      height: 49px;
+      width: 340px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: rgba(47, 43, 67, 0.04);
+}
+
+.header_nvpn_search input::placeholder {
+      color: rgba(47, 43, 67, 0.544);
+}
+
+.header_nvpn_search_button {
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      background-color: rgba(47, 43, 67, 0.04);
+      cursor: pointer;
+      padding: 10px;
+}
+
+.header_nvpn_search_button img {
+      width: 25px;
+      height: 25px;
+}
+
+.header_nvpn_other {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+}
+
+.header_nvpn_other_ul {
+      list-style: none;
+      display: flex;
+}
+
+.header_nvpn_other_ul li {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_other_ul a {
+      text-decoration: none;
+      color: #140A32;
+}
+
+.header_nvpn_other_ul a:hover {
+      color: #4927af;
+      transition: 0.7s;
+}
+
+.header_nvpn_other_ul span {
+      margin-left: 5px;
+}
+
+
+.header_nvpn_other_ul img {
+      width: 25px;
+      height: 25px;
+}
+
+/* Контент */
+.content_main {
+      padding: 20px 0;
+      color: rgb(67, 67, 67);
+}
+
+.content_main_nav a {
+      text-decoration: none;
+      color: #140A32;
+}
+
+.content_main_otrher h1 {
+      font-weight: 600;
+      font-size: 38px;
+}
+
+.content_main_otrher h3 {
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+
+      margin: 15px 0;
+}
+
+.content_main_otrher li {
+      font-size: 16px;
+      margin: 5px 0;
+}
+
+.content_main_otrher ul {
+      margin-left: 15px;
+      list-style: inside;      
+}
+
+.content_head {
+      display: flex;
+      margin-bottom: 40px;
+}
+
+.content_head_center h3 {
+      width: 360px;
+}
+
+.content_head img {
+      width: 500px;
+      height: 500px;
+      border-radius: 10px;
+}
+
+.content_head_center {
+      padding-left: 40px;
+      width: 500px;
+}
+
+.content_about_product {
+      width: 400px;
+}
+
+.content_about_product h3 {
+      margin: 20px 0;
+}
+
+.content_about_product_mini_xar_row {
+      display: flex;
+      margin: 10px 0;
+
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid #2F2B4326;
+}
+
+.content_about_product_mini_xar_left,
+.content_about_product_mini_xar_right {
+      width: 50%;
+}
+
+.content_about_product_mini_xar_left {
+      color: rgba(47, 43, 67, 0.544);
+      font-weight: 600;
+}
+
+.content_zakaz_main {
+      padding: 20px;
+
+      height: 160px;
+      width: 240px;
+      background-color: rgba(47, 43, 67, 0.04);
+      border-radius: 10px;
+}
+
+.content_zakaz_main h2 {
+      font-size: 38px;
+      font-weight: 700;
+      color: rgb(37, 98, 82);
+
+      margin-bottom: 20px;
+}
+
+.dropdown button {
+      padding: 10px;
+      border: none;
+      outline: none;
+
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      background-color: rgba(51, 131, 110, 1);
+      cursor: pointer;
+
+      /* Новый */
+      display: inline-block;
+      /*  */
+
+      width: 70%;
+      height: 50px;
+}
+
+.dropdown button:hover,
+.dropdown button:focus {
+      background-color: rgb(37, 98, 82);
+      transition: 0.7s;
+}
+
+.content_lower_dics_main {
+      padding-left: 40px;
+      margin-bottom: 100px;
+}
+
+.content_lower_title {
+      font-size: 22px;
+}
+
+/* Футер */
+.footer {
+      background-color: rgba(47, 43, 67, 0.04);
+      width: auto;
+      height: 320px;
+      padding-top: 30px;
+      margin-top: auto;
+}
+
+.footer_first,
+.footer_fourth  {
+      width: 340px;
+}
+
+.footer_second,
+.footer_third {
+      width: 150px;
+}
+
+#footer_cont img {
+      width: 85px;
+      height: 85px;
+}
+
+/* Для каталога */
+.footer li {
+      list-style: none;
+      padding: 4.5px 0;
+}
+
+.footer p,
+.footer a {
+      text-decoration: none;
+      color: rgba(47, 43, 67, 0.544);
+      font-size: 14px;
+
+      margin: 5px 0;
+
+      display: inline-block;
+      cursor: pointer;
+}
+
+.footer span {
+      text-decoration: none;
+      color: rgba(47, 43, 67, 0.544);
+      font-size: 14px;
+
+      margin: 5px 0;
+
+      display: inline-block;
+}
+
+.footer a:hover,
+.footer_a_p:hover {
+      text-decoration: underline;   
+}
+
+/* .footer ul {
+      list-style: none;
+} */

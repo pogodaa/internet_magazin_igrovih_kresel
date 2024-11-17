@@ -1,0 +1,6 @@
+[
+      {"model": "tovars.categorii", "pk": 2, "fields": {"name": "��� ������", "slug": "vse-tovary"}}, 
+      {"model": "tovars.categorii", "pk": 3, "fields": {"name": "������� ������", "slug": "ofisnye-kresla"}}, 
+      {"model": "tovars.categorii", "pk": 4, "fields": {"name": "������", "slug": "stulya"}}, 
+      {"model": "tovars.categorii", "pk": 5, "fields": {"name": "������� ������", "slug": "detskie-kresla"}}, 
+      {"model": "tovars.categorii", "pk": 6, "fields": {"name": "������� ������", "slug": "igrovye-kresla"}}]

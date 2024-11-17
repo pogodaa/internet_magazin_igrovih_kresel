@@ -1,0 +1,59 @@
+{% extends "main/base_other.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            {% block link_css %}
+            <link rel='stylesheet' href="{% static "db_files_login\css\login.css" %}">
+            {% endblock link_css %}
+
+            {% block title_page %}
+            <title>Авторизация</title>
+            {% endblock title_page %}
+      </head>
+      <body>
+            {% block content %}
+            <!-- Блок авторизации -->
+            <div class="conteiner">
+                  <div class="main_blcok_login">
+                        <img src="{% static "db_files_login\img\user_logo.png" %}" alt="">
+                        <p>Авторизация</p>
+
+                        <div class="block_rowss">
+                              <div class="block_row">
+                                    <h3>Логин</h3>
+                                    <input type="text" maxlength="50">
+                              </div>
+                              <div class="block_row">
+                                    <h3>Пароль</h3>
+                                    <input type="password" maxlength="32">
+                              </div>
+                        </div>
+
+                        {% comment %} <div class="zapomnit_zabil_block">
+                              <div class="zapomnit_block">
+                                    <input class="checkbox__" type="checkbox">
+                                    <span>Запомнить меня</span>
+                              </div>
+
+                              <div class="zabil_block">
+                                    <a href="#">
+                                          Забыл(a) пароль
+                                    </a>
+                              </div>
+                        </div> {% endcomment %}
+
+                        <button class="block_button">
+                              <span>Войти</span>
+                        </button>
+
+                        <div class="block_footer">
+                              <span>Не зарегистрированы? / </span><a href="#"><span>Создайте аккаунт</span></a>
+                        </div>
+                  </div>      
+                  
+            </div>
+            {% endblock content %}
+      </body>
+</html>

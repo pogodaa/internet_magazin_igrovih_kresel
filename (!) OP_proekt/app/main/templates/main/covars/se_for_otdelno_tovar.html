@@ -1,0 +1,113 @@
+{% extends "main/base_footer.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            {% block link_css %}
+            {% static "db_files_footer_pages\css\footer_pages.css" %}
+            {% endblock link_css %}
+
+            {% block title_page %}{{ product.name }}{% endblock title_page %}
+      </head>
+
+      <body>
+            {% block content %}
+
+            <!-- Контент --> 
+            <div class="conteiner">
+                  <!-- Верхняя часть -->
+                  <div class="content_main">
+                        <div class="content_head">
+                              <img src="{{ product.image.url }}" alt="{{ product.name }}">      
+
+                              <div class="content_head_center">
+                                    <h3>{{ product.name }}</h3>
+
+                                    <div class="content_about_product">
+                                          <h3>О товаре</h3><br>
+
+                                          <div class="content_about_product_mini_xar">
+                                                {% comment %} Тип {% endcomment %}
+                                                <div class="content_about_product_mini_xar_row">
+                                                      <div class="content_about_product_mini_xar_left">
+                                                            <span>Тип</span>
+                                                      </div>
+                                                      <div class="content_about_product_mini_xar_right">
+                                                            <span>{{ product.type }}</span>
+                                                      </div>
+                                                </div>
+
+                                                {% comment %} Ширина {% endcomment %}
+                                                <div class="content_about_product_mini_xar_row">
+                                                      <div class="content_about_product_mini_xar_left">
+                                                            <span>Ширина, см</span>
+                                                      </div>
+                                                      <div class="content_about_product_mini_xar_right">
+                                                            <span>{{ product.shirina }}</span>
+                                                      </div>
+                                                </div>
+
+                                                {% comment %} Гарантийный срок {% endcomment %}
+                                                <div class="content_about_product_mini_xar_row">
+                                                      <div class="content_about_product_mini_xar_left">
+                                                            <span>Гарантийный срок</span>
+                                                      </div>
+                                                      <div class="content_about_product_mini_xar_right">
+                                                            <span>{{ product.garant_srok }} месяцов(а)</span>
+                                                      </div>
+                                                </div>
+
+                                                {% comment %} Глубина, см {% endcomment %}
+                                                <div class="content_about_product_mini_xar_row">
+                                                      <div class="content_about_product_mini_xar_left">
+                                                            <span>Глубина, см</span>
+                                                      </div>
+                                                      <div class="content_about_product_mini_xar_right">
+                                                            <span>{{ product.glubina }}</span>
+                                                      </div>
+                                                </div>
+
+                                                {% comment %} Высота, см {% endcomment %}
+                                                <div class="content_about_product_mini_xar_row">
+                                                      <div class="content_about_product_mini_xar_left">
+                                                            <span>Высота, см</span>
+                                                      </div>
+                                                      <div class="content_about_product_mini_xar_right">
+                                                            <span>{{ product.visote }}</span>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="content_zakaz_main">
+                                    <h2>{{ product.price }} ₽</h2>
+
+                                    <div class="section_korzin_fav_main">
+                                          <div class="section_korzin_fav_main_left">
+                                                <div class="button_fixed">
+                                                      <div class="dropdown">
+                                                            <button class="drp_btn">
+                                                                  В корзину
+                                                            </button><br>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+                  <!-- Описание -->
+                  <div class="content_lower">
+                        <h2>Описание</h2><br>
+                        <div class="content_lower_dics_main">
+                              <p class="content_lower_title">{{ product.opis_title }}</p><br>
+                              <p class="content_lower_disc">{{ product.opis_dict|linebreaksbr }}</p>
+                        </div>
+                  </div>
+            </div>
+            {% endblock content %}
+      </body>
+</html>

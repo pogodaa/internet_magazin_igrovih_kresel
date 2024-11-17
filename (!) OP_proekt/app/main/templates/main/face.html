@@ -1,0 +1,48 @@
+{% extends "main/base_footer.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            {% block link_css %}
+            {% static "db_files\css\index.css" %}
+            {% endblock link_css %}
+
+            {% block title_page %}
+            Internet-магазин: Компьютерных кресел            
+            {% endblock title_page %}
+
+      </head>
+
+      <body>
+
+            {% block content %}
+                  <div class="conteiner" id="cont_face">
+                        <p>Добро пожаловать!</p>
+
+                        <div class="katalog_main">
+                              <div class="button_fixed">
+                                    <div class="dropdown" id="dropdown_left_side">
+                                          <button class="drp_btn">
+                                                Каталог
+                                          </button><br>
+
+                                          <div class="drp_dwn_cont" id="drp_dwn_cont_face">
+                                                <ul>
+                                                      {% for categoria in category %}
+                                                            <li><a href="{% url 'catalog_page' categoria.slug %}">{{ categoria.name }}</a></li>
+                                                      {% endfor %}
+                                                </ul>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            {% endblock content %}
+
+      </body>
+</html>

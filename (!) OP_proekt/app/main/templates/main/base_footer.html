@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" href=" {% static "db_files\img\logo_navpn.png" %} ">
+            <link rel="stylesheet" href="{% block link_css %}{% endblock link_css %}">
+
+            <!-- Open Sans -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+            <title>{% block title_page %}{% endblock title_page %}</title>
+      </head>
+
+      <body>
+            <!-- Нав пан -->
+            <div class="header">
+                  <div class="conteiner">
+                        <div class="header_nvpn">
+                              <div class="header_nvpn_image">
+                                    <a href=" {% url "main:index" %} ">
+                                          <img src=" {% static "db_files\img\logo_navpn.png" %} " alt="">
+                                    </a><br>
+
+                                    <span>Internet-магазин:<br>Компьютерных кресел</span>
+                              </div>
+
+                              <form role="search" class="search_form" action="{% url "search" %}" method="get">
+                                    <div class="header_nvpn_search">
+                                          <input type="search" name="q" placeholder="Я хочу найти...">
+                                          <button class="header_nvpn_search_button" type="submit">
+                                                <img src=" {% static "db_files\img\search.png" %} " alt="">
+                                          </button>
+                                    </div>
+                              </form>
+
+                              <div class="header_nvpn_other">
+                                    <ul class="header_nvpn_other_ul">
+                                          <li>
+                                                <img src=" {% static "db_files\img\user.png" %} " alt="">
+                                                <a href=" {% url "main:autorization" %} "><span>Вход / Регистрация</span></a>
+                                          </li>
+
+                                          <li>
+                                                <img src=" {% static "db_files\img\korzina.png" %} " alt="">
+                                                <a href="#"><span>Корзина</span></a>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            {% block content %}{% endblock content %}
+
+            <!-- Футер -->
+            <div class="footer">
+                  <div class="conteiner" id="footer_cont">
+                        <!-- Первый футер -->
+                        <div class="footer_first">
+                              <div class="header_nvpn_image">
+                                    <a href=" {% url "main:index" %} ">
+                                          <img src=" {% static "db_files\img\logo_navpn.png" %} " alt="">
+                                    </a><br>
+
+                                    <span>Internet-магазин:<br>Компьютерных кресел</span>
+                              </div>
+ 
+                              <p><a href=" {% url "main:polit_konf" %} ">Политика конфиденциальности</a></p>
+                              <p><a href=" {% url "main:sogl_obrabotka_pes_dannix" %} ">Согласие на обработку персональных данных</a></p>
+
+                              <span style="font-size: 11px;">Используя данный сайт, вы автоматически принимаете условия пользовательского соглашения и соглашаетесь с политикой конфиденциальности.</span>
+                        </div>
+
+                        <!-- Второй футер -->
+                        <div class="footer_second">
+                              <h3>О магазине</h3><br>
+                              <a href=" {% url "main:index" %} "><p class="footer_a_p">Главная</p></a><br>
+                              <a href=" {% url "main:about_page" %} "><p class="footer_a_p">О компании</p></a><br>
+                              <a href=" {% url "main:dostavka_oplata" %} "><p class="footer_a_p">Доставка и оплата</p></a><br>
+                              <a href=" {% url "main:contacts" %} "><p class="footer_a_p">Контакты</p></a><br>
+                        </div>
+
+                        <!-- Третий футер -->
+                        <div class="footer_third">
+                              <h3>Каталог</h3><br>
+                              {% for categoria in category %}
+                              <li><a href="{% url 'catalog_page' categoria.slug %}">{{ categoria.name }}</a></li>
+                              {% endfor %}
+                        </div>
+
+                        <!-- Четвёртый футер -->
+                        <div class="footer_fourth">
+                              <h3>Свяжитесь с нами</h3><br>
+                              <span>E-mail: <a href="mailto:support@furniture.com">support@furniture.com</a></span><br>
+
+                              <a href="tel:88005553535"><p class="footer_a_p" style="font-size: 16px;">8-800-555-35-35</p></a><br>
+                        </div>
+                  </div>
+            </div>      
+      </body>
+</html>

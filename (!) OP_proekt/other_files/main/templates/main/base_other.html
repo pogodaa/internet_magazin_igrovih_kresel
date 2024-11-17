@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" href="{% static "db_files/img/logo_navpn.png" %}">
+            {% block link_css %}{% endblock link_css %}
+
+            <!-- Open Sans -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+            {% block title_page %}{% endblock title_page %}
+      </head>
+
+      <body>
+            <!-- Нав пан -->
+            <div class="header">
+                  <div class="conteiner">
+                        <div class="header_nvpn">
+                              <div class="header_nvpn_image">
+                                    <a href="{% url "main:index" %}">
+                                          <img src="{% static "db_files/img/logo_navpn.png" %}" alt="">
+                                    </a><br>
+
+                                    <span>Internet-магазин:<br>Компьютерных кресел</span>
+                              </div>
+
+                              <div class="header_nvpn_search">
+                                    <input type="text" placeholder="Я хочу найти...">
+
+                                    <button class="header_nvpn_search_button"> 
+                                          <img src="{% static "db_files/img/search.png" %}" alt="">
+                                    </button>
+                              </div>
+
+                              <div class="header_nvpn_other">
+                                    <ul class="header_nvpn_other_ul">
+                                          <li>
+                                                <img src="{% static "db_files/img/user.png" %}" alt="">
+                                                <a href="{% url "main:autorization" %}"><span>Вход / Регистрация</span></a>
+                                          </li>
+
+                                          {% comment %} <li>
+                                                <img src="{% static "db_files/img/fav.png" %}" alt="">
+                                                <a href="#"><span>Избранное</span></a>
+                                          </li> {% endcomment %}
+
+                                          <li>
+                                                <img src="{% static "db_files/img/korzina.png" %}" alt="">
+                                                <a href="#"><span>Корзина</span></a>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            {% block content %}{% endblock content %}
+
+            {% block footer %}{% endblock footer %}
+      </body>
+</html>

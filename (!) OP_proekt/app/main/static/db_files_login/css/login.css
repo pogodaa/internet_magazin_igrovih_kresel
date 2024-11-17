@@ -1,0 +1,231 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: "Open Sans", sans-serif;
+      color: #140A32;
+      font-weight: 400;
+      font-size: 16px;
+}
+
+.conteiner {
+      margin-inline: 140px;
+      align-items: center;
+      margin-bottom: 40px;
+}
+
+/* Нав пан */
+.header {
+      padding: 20px 0 0 0;
+}
+
+.header_nvpn {
+      display: flex;
+      justify-content: space-between;
+}
+
+.header_nvpn_image {
+      width: 300px;
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_image img {
+      width: 85px;
+      height: 85px;
+      cursor: pointer;
+}
+
+.header_nvpn_image span {
+      font-size: 13px;
+      margin-left: 10px;
+      color: rgba(47, 43, 67, 0.544);
+}
+
+.header_nvpn_search {
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_search input {
+      height: 49px;
+      width: 340px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: rgba(47, 43, 67, 0.04);
+}
+
+.header_nvpn_search input::placeholder {
+      color: rgba(47, 43, 67, 0.544);
+}
+
+.header_nvpn_search_button {
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      background-color: rgba(47, 43, 67, 0.04);
+      cursor: pointer;
+      padding: 10px;
+}
+
+.header_nvpn_search_button img {
+      width: 25px;
+      height: 25px;
+}
+
+.header_nvpn_other {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+}
+
+.header_nvpn_other_ul {
+      list-style: none;
+      display: flex;
+}
+
+.header_nvpn_other_ul li {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+}
+
+.header_nvpn_other_ul a {
+      text-decoration: none;
+      color: #140A32;
+}
+
+.header_nvpn_other_ul a:hover {
+      color: #4927af;
+      transition: 0.7s;
+}
+
+.header_nvpn_other_ul span {
+      margin-left: 5px;
+}
+
+
+.header_nvpn_other_ul img {
+      width: 25px;
+      height: 25px;
+}
+
+/* Блок авторизации */
+.main_blcok_login {
+      background-color: whitesmoke;
+      border: 1px #2F2B4326;
+      border-radius: 10px;
+
+      width: 550px;
+      height: 640px;
+
+      margin: auto;
+      position: relative;
+      top: -12px;
+
+      padding: 20px;
+      align-items: center;
+}
+
+.main_blcok_login p {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 22px;
+      font-weight: 600;
+}
+
+.main_blcok_login img {
+      width: 150px;
+      height: 135px;
+      position: relative;
+      left: 35%;
+}
+
+.block_rowss {
+      margin-top: 30px;
+}
+
+.block_row h3 {
+      color: #140A32;
+}
+
+.block_row input {
+      width: 100%;
+      height: 25px;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin: 10px 0;
+}
+
+.zapomnit_zabil_block {
+      margin-top: 10px;
+      padding-inline: 10px;
+      display: flex;
+      justify-content: space-between;
+} 
+
+.zapomnit_block {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+}
+
+.zapomnit_block input {
+      position: relative;
+      top: 0.6px;
+}
+
+.block_button {
+      margin-top: 50px;
+      width: 100%;
+      height: 50px;
+      border: none;
+      outline: none;
+
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: rgba(51, 131, 110, 1);
+}
+
+.block_button:hover {
+      background-color: rgb(37, 98, 82);
+      transition: 0.7s;
+}
+
+.block_footer a:hover,
+.zabil_block a:hover {
+      color: rgb(37, 98, 82);
+      transition: 0.7s;
+}
+
+.block_button span {
+      display: block;
+      color: white;
+      font-weight: 600;
+      font-size: 17px;
+      text-align: center;
+
+}
+
+.block_footer {
+      text-align: center;
+      margin-top: 53px;
+}
+
+.block_footer a,
+.zabil_block a {
+      text-decoration: none;
+      color: rgba(51, 131, 110, 1);
+}

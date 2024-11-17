@@ -1,0 +1,117 @@
+{% extends "main/base_footer.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            {% block link_css %}
+            {% static "db_files\css\index.css" %}
+            {% endblock link_css %}
+
+            {% block title_page %}
+            Главная страница
+            {% endblock title_page %}
+      </head>
+
+      <body>
+            {% block content %}
+            <!-- Каталог -->
+            <div class="conteiner_katalog">
+                  <!-- Каталог кнопка -->
+                  <div class="katalog_main">
+                        <div class="button_fixed">
+                              <div class="dropdown" id="dropdown_left_side">
+                                    <button class="drp_btn">
+                                          Каталог
+                                    </button><br>
+                                    <div class="drp_dwn_cont">
+                                          <ul>
+                                                {% for category in category %}
+                                                      <li><a href="{% url 'main:index' %}">{{ category.name }}</a></li>
+                                                {% endfor %}
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+                  <!-- Фильтр кнопка -->
+                  <div class="catalog_right_side">
+                        <!-- Кнопка фильтрации -->
+                        <div class="katalog_main_right_side">
+                              <div class="dropdown" id="dropdown_right_side">
+                                    <button class="drp_btn">
+                                          Фильтры
+                                    </button><br>
+                                    <div class="drp_dwn_cont_right">
+                                          <ul>
+                                                <li>
+                                                      <div class="dropdown_right_side_main">
+                                                            <form action="" method="post" class="drp_dwn_cont_right_form">
+                                                                  <p>Сортировать по цене:</p><br>
+                                                                  <div class="cont_right_side_row">
+                                                                        <input name="cont_right_side_row_radio" type="radio">
+                                                                        <label for="ot_bol_k_mensh">По возрастанию</label>
+                                                                  </div><br>
+                                                                  <div class="cont_right_side_row">
+                                                                        <input name="cont_right_side_row_radio" type="radio">
+                                                                        <label for="ot_mensh_k_bol">По убыванию</label>
+                                                                  </div><br>
+                                                            </form>
+                                                            <button class="drp_btn_filter" id="drp_btn_filter_right_side">
+                                                                  <span>Применить</span>
+                                                            </button><br>
+                                                      </div>
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+                  </div> 
+            </div>
+
+            <!-- Каталог_Товары -->
+            <div class="conteiner">
+                  <div class="filtr_xar_tov_main">
+                        <div class="filtr_xar_tov_right_side">
+                              <div class="cards_main">
+
+                                    {% for product in tovars %}
+                                    <div class="cardd_main">
+                                          <div class="card_head">
+                                                <a href="{% url "product_page" product.slug %}">
+                                                      {% if product.image  %}
+                                                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                            
+                                                      {% else %}
+                                                            <img src="{% static "img\katalog_tovars\other\image_not_found.png" %}" alt="">
+
+                                                      {% endif %}
+                                                </a>
+                                          </div>
+
+                                          <div class="card_cont">
+                                                <span>{{ product.price }} ₽</span>
+                                                <p style="margin-top: 12px;">
+                                                      <a href="{% url "product_page" product.slug %}">
+                                                            {{ product.name }}
+                                                      </a>
+                                                </p>
+
+                                                <div class="button_fixed">
+                                                      <div class="dropdown" id="drop_button_card">
+                                                            <button class="drp_btn">
+                                                                  В корзину
+                                                            </button><br>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    {% endfor %}
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            {% endblock content %}
+      </body>
+</html>

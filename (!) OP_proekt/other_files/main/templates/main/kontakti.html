@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            {% block link_css %}
+            <link rel="stylesheet" href="{% static "db_files_footer_pages\css\footer_pages.css" %}">
+            {% endblock link_css %}
+
+            {% block title_page %}
+            <title>Контакты</title>
+            {% endblock title_page %}
+      </head>
+
+      <body>
+            {% block content %}
+            <!-- Конт -->
+            <div class="conteiner">
+                  <div class="content_main">
+                        <div class="content_main_nav">
+                              <span><a href="{% url "main:index" %}">Главная</a></span>
+                              <span> / </span>
+                              <span>Контакты</span>
+                        </div><br>
+
+                        <div class="content_main_otrher">
+                              <h1>Контакты</h1><br>
+                              <h2>ООО Internet-магазин:Компьютерных кресел</h2><br>
+                              <p><b>E-mail: </b>support@furniture.com</p><br>
+                              <p><b>Наш телефон: </b>8-800-555-35-35</p>
+                        </div>
+                  </div>
+            </div><br><br><br>
+            {% endblock content %}
+
+      </body>
+</html>
